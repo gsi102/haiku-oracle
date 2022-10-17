@@ -1,6 +1,12 @@
-# Getting Started with Create React App
+Haiku-oracle
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The pet project allows you to receive prophecies in the Japanese haiku style.
+
+Stack:
+
+- React
+- SASS
+- MongoDB
 
 ## Available Scripts
 
