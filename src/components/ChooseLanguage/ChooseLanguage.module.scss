@@ -1,0 +1,58 @@
+.chooseLanguage {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: 1;
+  padding: 10px;
+  opacity: 0;
+  transition: all 5s ease-in;
+}
+
+.appear {
+  opacity: 1;
+}
+
+.chooseLanguage__header {
+  padding: 20px 0;
+}
+
+// .chooseLanguage__closeButton {
+//   position: absolute;
+//   top: 30px;
+//   right: 20px;
+
+//   &:hover {
+//     cursor: pointer;
+//   }
+
+//   &:before,
+//   &:after {
+//     display: block;
+//     content: "";
+//     width: 15px;
+//     height: 2px;
+//     background-color: black;
+//     transform: translateY(50%) rotate(45deg);
+//   }
+
+//   &:after {
+//     transform: translateY(-50%) rotate(-45deg);
+//   }
+// }
+
+.chooseLanguage__choice {
+  display: flex;
+  border: 1px solid green;
+  width: 80%;
+  justify-content: space-between;
+}
+
+.chooseLanguage__choice__button {
+  background-color: white;
+  padding: 4px 8px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  border: 0px;
+  border-radius: 5px;
+}

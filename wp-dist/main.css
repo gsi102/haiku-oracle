@@ -1,0 +1,68 @@
+/*!**************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/components/ChooseLanguage/ChooseLanguage.module.scss ***!
+  \**************************************************************************************************************************************************************************************************************************/
+.idFVpHA_uEPKNa4ingTN {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: 1;
+  padding: 10px;
+  opacity: 0;
+  transition: all 5s ease-in;
+}
+
+.wd8p7xcVVhjqtdbW6WTn {
+  opacity: 1;
+}
+
+.Hykqc6xhvF8F3JZ2rDHR {
+  padding: 20px 0;
+}
+
+.sViBqL9whgYfdgrKDCAl {
+  display: flex;
+  border: 1px solid green;
+  width: 80%;
+  justify-content: space-between;
+}
+
+.c92D4XLu_v6gWjXxeK9_ {
+  background-color: white;
+  padding: 4px 8px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  border: 0px;
+  border-radius: 5px;
+}
+/*!***************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/styles/mainStyles.module.scss ***!
+  \***************************************************************************************************************************************************************************************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--tg-theme-bg-color);
+  color: var(--tg-theme-text-color);
+}
+
+.VqCTaST9SDA7xlDYpcus:hover {
+  cursor: pointer;
+}
+/*!************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/components/MainComponent/MainComponent.module.scss ***!
+  \************************************************************************************************************************************************************************************************************************/
+.ktP9eSRGU7U1HtEwW2vd {
+  margin: 0 auto;
+  width: 30%;
+  border: 1px solid red;
+}
+
+@media screen and (max-width: 480px) {
+  .ktP9eSRGU7U1HtEwW2vd {
+    width: 100%;
+  }
+}

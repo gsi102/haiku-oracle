@@ -1,0 +1,11 @@
+.mainComponent {
+  margin: 0 auto;
+  width: 30%;
+  border: 1px solid red;
+}
+
+@media screen and (max-width: 480px) {
+  .mainComponent {
+    width: 100%;
+  }
+}
