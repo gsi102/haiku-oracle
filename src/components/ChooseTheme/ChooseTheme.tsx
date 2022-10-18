@@ -1,22 +1,31 @@
-import Button from "components/UI/Button/Button";
+import Button from "../UI/Button/Button";
 import {
   LANGUAGE,
   THEME_1_CODE,
   THEME_2_CODE,
   THEME_3_CODE,
-} from "constants/CONST";
-import { useAppDispatch } from "hooks/useAppDispatch";
-import { useAppSelector } from "hooks/useAppSelector";
+} from "../../constants/CONST";
+import { useAppDispatch } from "../../hooks/useAppDispatch";
+import { useAppSelector } from "../../hooks/useAppSelector";
 import React, { useEffect, useRef, useState } from "react";
+import {
+  useGetHaikuQuery,
+  useLazyGetHaikuQuery,
+} from "../../services/HaikuOracleService";
 import { ThemeType } from "types/types";
-import { setTheme } from "../../store/reducers/commonSlice";
+import { setHaikuText, setTheme } from "../../store/reducers/commonSlice";
 
 import styles from "./ChooseTheme.module.scss";
+import mainStyles from "../../styles/mainStyles.module.scss";
 
 const ChooseTheme: React.FC = () => {
   const dispatch = useAppDispatch();
-
+  const currentTheme = useAppSelector((state) => state.common.theme);
   let language = useAppSelector((state) => state.common.language);
+
+  // const getHaiku = useGetHaikuQuery({ language, theme: currentTheme });
+  const [lazyGetHaiku] = useLazyGetHaikuQuery();
+
   // @ts-ignore
   language = language.toUpperCase();
   // @ts-ignore
@@ -26,13 +35,24 @@ const ChooseTheme: React.FC = () => {
 
   useEffect(() => {
     if (appear === "" && keepLang.current !== language) {
-      setAppear(styles.appear);
+      setAppear(mainStyles.appear);
       keepLang.current = language;
     }
   }, [language]);
 
   const onChoice = (theme: ThemeType) => {
     dispatch(setTheme({ data: theme }));
+
+    lazyGetHaiku({
+      language,
+      theme,
+    })
+      .unwrap()
+      .then((res) => {
+        const haikuBody = res.responseBody;
+        dispatch(setHaikuText({ data: haikuBody }));
+      })
+      .catch((rejected) => console.error(rejected));
   };
 
   return (

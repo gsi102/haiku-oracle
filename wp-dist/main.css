@@ -1,6 +1,48 @@
+/*!*************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/components/UI/Button/Button.module.scss ***!
+  \*************************************************************************************************************************************************************************************************************/
+.WTsBDLCOKo9YUGHVtMxw {
+  border: 0px;
+  border-radius: 5px;
+}
+.WTsBDLCOKo9YUGHVtMxw:hover {
+  cursor: pointer;
+}
+/*!***************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/styles/mainStyles.module.scss ***!
+  \***************************************************************************************************************************************************************************************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--tg-theme-bg-color);
+  color: var(--tg-theme-text-color);
+}
+
+.Hw7eQUH4a791VkfINKFs {
+  opacity: 1 !important;
+}
 /*!**************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/components/ChooseLanguage/ChooseLanguage.module.scss ***!
   \**************************************************************************************************************************************************************************************************************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--tg-theme-bg-color);
+  color: var(--tg-theme-text-color);
+}
+
+.wd8p7xcVVhjqtdbW6WTn {
+  opacity: 1 !important;
+}
+
 .idFVpHA_uEPKNa4ingTN {
   position: relative;
   display: flex;
@@ -23,21 +65,20 @@
 
 .sViBqL9whgYfdgrKDCAl {
   display: flex;
+  padding: 20px 0;
   border: 1px solid green;
   width: 80%;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .c92D4XLu_v6gWjXxeK9_ {
   background-color: white;
   padding: 4px 8px;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-  border: 0px;
-  border-radius: 5px;
 }
-/*!***************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/styles/mainStyles.module.scss ***!
-  \***************************************************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/components/ChooseTheme/ChooseTheme.module.scss ***!
+  \********************************************************************************************************************************************************************************************************************/
 * {
   margin: 0;
   padding: 0;
@@ -49,8 +90,62 @@ body {
   color: var(--tg-theme-text-color);
 }
 
-.VqCTaST9SDA7xlDYpcus:hover {
-  cursor: pointer;
+.AHn4Kpn3SOgOGkp3WY1q {
+  opacity: 1 !important;
+}
+
+.rNSxjjtZao0rkP0ISD8r {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: 1;
+  padding: 10px;
+  opacity: 0;
+  transition: all 5s ease-in;
+  border: 1px solid aqua;
+}
+
+.AHn4Kpn3SOgOGkp3WY1q {
+  opacity: 1;
+}
+
+.lWUdeDJOkwUjg0xiHs6g {
+  display: flex;
+  padding: 20px 0;
+  border: 1px solid green;
+  width: 80%;
+  justify-content: space-evenly;
+}
+
+.Eojn6lk9yBZFoxD3C67D {
+  background-color: white;
+  padding: 4px 8px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+/*!****************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/components/HaikuItem/HaikuItem.module.scss ***!
+  \****************************************************************************************************************************************************************************************************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--tg-theme-bg-color);
+  color: var(--tg-theme-text-color);
+}
+
+.ETj_5UueqwImD8xdAch9 {
+  opacity: 1 !important;
+}
+
+.aWtvztgr5JMB3yOxWfa0 {
+  text-align: center;
+  opacity: 0;
+  transition: all 5s ease-in;
 }
 /*!************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/components/MainComponent/MainComponent.module.scss ***!

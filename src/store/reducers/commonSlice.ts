@@ -4,6 +4,7 @@ import { LanguageType, ThemeType } from "types/types";
 const initialState = {
   language: "DEFAULT" as LanguageType,
   theme: "DEFAULT" as ThemeType,
+  haikuText: "" as string,
 };
 
 export const commonSlice = createSlice({
@@ -16,9 +17,12 @@ export const commonSlice = createSlice({
     setTheme: (state, action) => {
       state.theme = action.payload.data;
     },
+    setHaikuText: (state, action) => {
+      state.haikuText = action.payload.data;
+    },
   },
 });
 
-export const { setLanguage, setTheme } = commonSlice.actions;
+export const { setLanguage, setTheme, setHaikuText } = commonSlice.actions;
 
 export const commonReducer = commonSlice.reducer;

@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
 import ChooseLanguage from "../ChooseLanguage/ChooseLanguage";
-import { useTelegram } from "hooks/useTelegram";
+import ChooseTheme from "../ChooseTheme/ChooseTheme";
+import HaikuItem from "../HaikuItem/HaikuItem";
+import { useTelegram } from "../../hooks/useTelegram";
 
 import styles from "./MainComponent.module.scss";
-import ChooseTheme from "../ChooseTheme/ChooseTheme";
 
 const MainComponent: React.FC = () => {
   const { tg } = useTelegram();
@@ -17,6 +18,7 @@ const MainComponent: React.FC = () => {
       <div className={styles.mainComponent__content}>
         <ChooseLanguage />
         <ChooseTheme />
+        <HaikuItem />
       </div>
     </div>
   );

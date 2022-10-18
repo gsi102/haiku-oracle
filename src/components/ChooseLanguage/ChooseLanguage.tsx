@@ -3,7 +3,7 @@ import { LanguageType } from "types/types";
 import { useAppDispatch } from "../../hooks/useAppDispatch";
 import { setLanguage } from "../../store/reducers/commonSlice";
 import { LANGUAGE, RU_CODE, EN_CODE } from "../../constants/CONST";
-import Button from "components/UI/Button/Button";
+import Button from "../UI/Button/Button";
 
 import mainStyles from "../../styles/mainStyles.module.scss";
 import styles from "./ChooseLanguage.module.scss";
@@ -22,7 +22,7 @@ const ChooseLanguage: React.FC = () => {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    setAppear(styles.appear);
+    setAppear(mainStyles.appear);
     return () => {
       setAppear("");
     };

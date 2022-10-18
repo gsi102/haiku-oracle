@@ -36,10 +36,6 @@ module.exports = {
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin(),
   ],
-  devServer: {
-    port: 3009,
-    hot: isDev,
-  },
   module: {
     rules: [
       {

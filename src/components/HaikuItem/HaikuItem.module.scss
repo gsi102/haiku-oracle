@@ -1,0 +1,7 @@
+@use "../../styles/mainStyles.module.scss" as global;
+
+.haikuItem {
+  text-align: center;
+  opacity: 0;
+  transition: global.$transitionGlobal;
+}
