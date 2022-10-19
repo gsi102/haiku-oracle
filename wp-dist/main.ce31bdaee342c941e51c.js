@@ -109,13 +109,14 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 var ChooseTheme = function ChooseTheme() {
   var dispatch = (0,_hooks_useAppDispatch__WEBPACK_IMPORTED_MODULE_2__.useAppDispatch)();
-  var theme = (0,_hooks_useAppSelector__WEBPACK_IMPORTED_MODULE_3__.useAppSelector)(function (state) {
+  var currentTheme = (0,_hooks_useAppSelector__WEBPACK_IMPORTED_MODULE_3__.useAppSelector)(function (state) {
     return state.common.theme;
   });
   var language = (0,_hooks_useAppSelector__WEBPACK_IMPORTED_MODULE_3__.useAppSelector)(function (state) {
     return state.common.language;
   });
-  var getHaiku = (0,_services_HaikuOracleService__WEBPACK_IMPORTED_MODULE_5__.useGetHaikuQuery)(theme);
+
+  // const getHaiku = useGetHaikuQuery({ language, theme: currentTheme });
   var _useLazyGetHaikuQuery = (0,_services_HaikuOracleService__WEBPACK_IMPORTED_MODULE_5__.useLazyGetHaikuQuery)(),
     _useLazyGetHaikuQuery2 = _slicedToArray(_useLazyGetHaikuQuery, 1),
     lazyGetHaiku = _useLazyGetHaikuQuery2[0];
@@ -143,7 +144,10 @@ var ChooseTheme = function ChooseTheme() {
     dispatch((0,_store_reducers_commonSlice__WEBPACK_IMPORTED_MODULE_6__.setTheme)({
       data: theme
     }));
-    lazyGetHaiku(theme).unwrap().then(function (res) {
+    lazyGetHaiku({
+      language: language,
+      theme: theme
+    }).unwrap().then(function (res) {
       var haikuBody = res.responseBody;
       dispatch((0,_store_reducers_commonSlice__WEBPACK_IMPORTED_MODULE_6__.setHaikuText)({
         data: haikuBody
@@ -289,14 +293,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "API_URL": function() { return /* binding */ API_URL; },
 /* harmony export */   "EN_CODE": function() { return /* binding */ EN_CODE; },
+/* harmony export */   "EN_LANG": function() { return /* binding */ EN_LANG; },
 /* harmony export */   "LANGUAGE": function() { return /* binding */ LANGUAGE; },
 /* harmony export */   "RU_CODE": function() { return /* binding */ RU_CODE; },
+/* harmony export */   "RU_LANG": function() { return /* binding */ RU_LANG; },
 /* harmony export */   "THEME_1_CODE": function() { return /* binding */ THEME_1_CODE; },
 /* harmony export */   "THEME_2_CODE": function() { return /* binding */ THEME_2_CODE; },
 /* harmony export */   "THEME_3_CODE": function() { return /* binding */ THEME_3_CODE; }
 /* harmony export */ });
+var RU_LANG = "Русский";
+var EN_LANG = "English";
+var EN_CODE = "en";
+var RU_CODE = "ru";
+var THEME_1_CODE = "eternity";
+var THEME_2_CODE = "love";
+var THEME_3_CODE = "freedom";
+var API_URL = "http://localhost:3001";
 var EN = {
-  LANGUAGE_NAME: "English",
+  LANGUAGE_NAME: EN_LANG,
   CHOOSE_THEME: "Choose the theme",
   THEME_1: "Eternity",
   THEME_2: "Love",
@@ -305,7 +319,7 @@ var EN = {
 var LANGUAGE = {
   EN: EN,
   RU: {
-    LANGUAGE_NAME: "Русский",
+    LANGUAGE_NAME: RU_LANG,
     CHOOSE_THEME: "Выберите тему",
     THEME_1: "Вечность",
     THEME_2: "Любовь",
@@ -313,12 +327,6 @@ var LANGUAGE = {
   },
   DEFAULT: EN
 };
-var EN_CODE = "en";
-var RU_CODE = "ru";
-var THEME_1_CODE = "eternity";
-var THEME_2_CODE = "love";
-var THEME_3_CODE = "freedom";
-var API_URL = "http://localhost:3001";
 
 /***/ }),
 
@@ -406,8 +414,10 @@ var haikuAPI = (0,_reduxjs_toolkit_query_react__WEBPACK_IMPORTED_MODULE_1__.crea
   endpoints: function endpoints(builder) {
     return {
       getHaiku: builder.query({
-        query: function query(theme) {
-          return "haiku/".concat(theme);
+        query: function query(_ref) {
+          var language = _ref.language,
+            theme = _ref.theme;
+          return "haiku/".concat(language, "/").concat(theme);
         }
       })
     };
