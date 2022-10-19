@@ -5,11 +5,14 @@
 /.pnp
 .pnp.js
 
+
 # testing
 /coverage
 
 # production
+/wp-dist
 /build
+/.firebase
 
 # misc
 .DS_Store
