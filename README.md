@@ -1,12 +1,13 @@
 Haiku-oracle
 
-The pet project allows you to receive prophecies in the Japanese haiku style.
+The pet project. The telegram bot @haikuoraclebot sends you Japanese haiku in two languages and on the chosen topic.
 
 Stack:
 
 - React
-- SASS
+- NodeJS (Express)
 - MongoDB
+- SASS
 
 ## Available Scripts
 
