@@ -2,7 +2,7 @@
 
 Frontend. The Web-app is adaptated for the internal TG browser.
 
-The pet project. The telegram bot @haikuoraclebot sends you Japanese haiku in two languages and on the chosen topic. 
+The pet project. The telegram bot @haikuoraclebot (link: https://t.me/haikuoraclebot ) sends you Japanese haiku in two languages and on the chosen topic. 
 
 # Stack
 
