@@ -1,9 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { LanguageType, ThemeType } from "types/types";
+import { DEFAULT } from "../../constants/CONST";
+import { LanguageType, ThemeType } from "../../types/types";
 
 const initialState = {
-  language: "DEFAULT" as LanguageType,
-  theme: "DEFAULT" as ThemeType,
+  language: DEFAULT as LanguageType,
+  theme: DEFAULT as ThemeType,
   haikuText: "" as string,
 };
 

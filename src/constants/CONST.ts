@@ -8,7 +8,9 @@ export const THEME_1_CODE = "eternity";
 export const THEME_2_CODE = "love";
 export const THEME_3_CODE = "freedom";
 
-export const API_URL = "http://localhost:3001";
+export const DEFAULT = "DEFAULT";
+
+export const API_URL = "https://haiku-oracle-back-prod.herokuapp.com/";
 const EN = {
   LANGUAGE_NAME: EN_LANG,
   CHOOSE_THEME: "Choose the theme",

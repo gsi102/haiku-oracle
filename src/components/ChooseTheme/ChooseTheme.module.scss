@@ -1,5 +1,3 @@
-@use "../../styles/mainStyles.module.scss" as global;
-
 .chooseTheme {
   position: relative;
   display: flex;
@@ -9,24 +7,35 @@
   flex-wrap: 1;
   padding: 10px;
   opacity: 0;
-  transition: global.$transitionGlobal;
-  border: 1px solid aqua;
 }
 
 .appear {
   opacity: 1;
 }
 
+.chooseTheme__header {
+  font-size: 1.2rem;
+  padding: 20px 0;
+}
+
 .chooseTheme__choice {
   display: flex;
   padding: 20px 0;
-  border: 1px solid green;
-  width: 80%;
+  width: 100%;
   justify-content: space-evenly;
 }
 
 .chooseTheme__choice__button {
-  background-color: white;
-  padding: 4px 8px;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  padding: 6px 10px;
+  font-size: 1.2rem;
+}
+
+.chooseTheme__preloaderWrapper {
+  height: 32px;
+  position: relative;
+
+  & > * {
+    position: absolute;
+    transform: translateY(-25%) translateX(-50%);
+  }
 }

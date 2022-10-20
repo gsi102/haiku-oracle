@@ -1,6 +1,9 @@
 .button {
   border: 0px;
   border-radius: 5px;
+  color: var(--tg-theme-button-text-color);
+  background-color: var(--tg-theme-button-color);
+  box-shadow: 1px 1px 20px var(--tg-theme-button-text-color);
 
   &:hover {
     cursor: pointer;
