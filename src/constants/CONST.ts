@@ -10,8 +10,8 @@ export const THEME_3_CODE = "freedom";
 
 export const DEFAULT = "DEFAULT";
 
-// export const API_URL = "https://haiku-oracle-back-prod.herokuapp.com/";
-export const API_URL = "http://localhost:3001/";
+export const API_URL = "https://haiku-oracle-back-prod.herokuapp.com/";
+// export const API_URL = "http://localhost:3001/";
 const EN = {
   LANGUAGE_NAME: EN_LANG,
   CHOOSE_THEME: "Choose the theme",
