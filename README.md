@@ -12,7 +12,7 @@ Front:
 - Typescript
 
 Back:
-https://github.com/gsi102/haiku-oracle-back
+(Private repository. Show on demand)
 - NodeJS (express)
 - MongoDB
 - Typescript
