@@ -5,10 +5,8 @@
   align-items: center;
   flex-direction: column;
   opacity: 0;
-}
-
-.appear {
-  opacity: 1;
+  height: 0;
+  top: -1000px;
 }
 
 .chooseTheme__header {

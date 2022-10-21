@@ -38,6 +38,8 @@ body {
 }
 
 .appear {
+  height: 100% !important;
   opacity: 1 !important;
+  top: auto !important;
   transition: $transitionGlobal;
 }
