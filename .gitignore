@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+README.md
 
 
 # testing
@@ -13,6 +14,7 @@
 /wp-dist
 /build
 /.firebase
+.psd
 
 # misc
 .DS_Store

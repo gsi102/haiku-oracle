@@ -10,7 +10,7 @@ import { useAppSelector } from "../../hooks/useAppSelector";
 import React, { useEffect, useRef, useState } from "react";
 import { useLazyGetHaikuQuery } from "../../services/HaikuOracleService";
 import { ThemeType } from "types/types";
-import { setHaikuText, setTheme } from "../../store/reducers/commonSlice";
+import { setHaiku, setTheme } from "../../store/reducers/commonSlice";
 import Preloader from "../UI/Preloader/Preloader";
 
 import styles from "./ChooseTheme.module.scss";
@@ -38,7 +38,7 @@ const ChooseTheme: React.FC = () => {
   }, [language]);
 
   const onChoice = (theme: ThemeType) => {
-    dispatch(setHaikuText({ data: "" }));
+    dispatch(setHaiku({ data: { text: "", author: "" } }));
     dispatch(setTheme({ data: theme }));
     setShowPreloader(true);
     lazyGetHaiku({
@@ -47,9 +47,15 @@ const ChooseTheme: React.FC = () => {
     })
       .unwrap()
       .then((res) => {
-        const haikuBody = res.responseBody;
+        const haikuBody = res.data.text;
+        const haikuAuthor = res.data.author;
+        const haikuYears = res.data.years;
         setShowPreloader(false);
-        dispatch(setHaikuText({ data: haikuBody }));
+        dispatch(
+          setHaiku({
+            data: { text: haikuBody, author: haikuAuthor, years: haikuYears },
+          })
+        );
       })
       .catch((rejected) => console.error(rejected));
   };

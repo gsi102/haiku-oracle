@@ -4,8 +4,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  flex-wrap: 1;
-  padding: 10px;
   opacity: 0;
 }
 
@@ -14,7 +12,7 @@
 }
 
 .chooseTheme__header {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   padding: 20px 0;
 }
 
@@ -31,11 +29,7 @@
 }
 
 .chooseTheme__preloaderWrapper {
-  height: 32px;
-  position: relative;
-
-  & > * {
-    position: absolute;
-    transform: translateY(-25%) translateX(-50%);
-  }
+  position: absolute;
+  bottom: 0;
+  transform: translateY(50%);
 }

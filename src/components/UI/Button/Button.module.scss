@@ -1,9 +1,16 @@
+$mainFirst: rgb(255, 95, 109);
+$mainSecond: rgb(255, 195, 113);
+$mainGradient: linear-gradient(260deg, $mainSecond, $mainFirst);
+
 .button {
   border: 0px;
   border-radius: 5px;
-  color: var(--tg-theme-button-text-color);
-  background-color: var(--tg-theme-button-color);
-  box-shadow: 1px 1px 20px var(--tg-theme-button-text-color);
+  // color: var(--tg-theme-button-text-color);
+  // background-color: var(--tg-theme-button-color);
+  // box-shadow: 1px 1px 20px var(--tg-theme-button-text-color);
+
+  color: black !important;
+  background: $mainGradient !important;
 
   &:hover {
     cursor: pointer;

@@ -6,6 +6,8 @@ const initialState = {
   language: DEFAULT as LanguageType,
   theme: DEFAULT as ThemeType,
   haikuText: "" as string,
+  haikuAuthor: "" as string,
+  haikuYears: "" as string,
 };
 
 export const commonSlice = createSlice({
@@ -18,12 +20,14 @@ export const commonSlice = createSlice({
     setTheme: (state, action) => {
       state.theme = action.payload.data;
     },
-    setHaikuText: (state, action) => {
-      state.haikuText = action.payload.data;
+    setHaiku: (state, action) => {
+      state.haikuText = action.payload.data.text;
+      state.haikuAuthor = action.payload.data.author;
+      state.haikuYears = action.payload.data.years;
     },
   },
 });
 
-export const { setLanguage, setTheme, setHaikuText } = commonSlice.actions;
+export const { setLanguage, setTheme, setHaiku } = commonSlice.actions;
 
 export const commonReducer = commonSlice.reducer;

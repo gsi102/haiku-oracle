@@ -1,14 +1,27 @@
 .haikuItem {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  display: grid;
   opacity: 0;
-  width: fit-content;
-  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.haikuItem__wrapper {
+  justify-self: center;
+  text-align: left;
 }
 
 .haikuItem__text {
-  font-size: 1.2rem;
-  text-align: left;
+  justify-self: center;
+  position: relative;
+  font-size: 1.1rem;
+  width: fit-content;
+
+  &:before {
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 100%;
+    left: -8px;
+    // background-color: var(--tg-theme-text-color);
+    background-color: white;
+  }
 }
