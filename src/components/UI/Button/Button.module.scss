@@ -3,14 +3,16 @@ $mainSecond: rgb(255, 195, 113);
 $mainGradient: linear-gradient(260deg, $mainSecond, $mainFirst);
 
 .button {
-  border: 0px;
-  border-radius: 5px;
+  border-radius: 10px;
   // color: var(--tg-theme-button-text-color);
   // background-color: var(--tg-theme-button-color);
   // box-shadow: 1px 1px 20px var(--tg-theme-button-text-color);
 
-  color: black !important;
-  background: $mainGradient !important;
+  // &.active {
+  //   border: 0px !important;
+  //   color: black !important;
+  //   background: $mainGradient !important;
+  // }
 
   &:hover {
     cursor: pointer;

@@ -1,3 +1,6 @@
+@use "../UI/Button/Button.module.scss" as Button;
+@use "../../styles/mainStyles.module.scss" as global;
+
 .chooseTheme {
   position: relative;
   display: flex;
@@ -21,9 +24,34 @@
   justify-content: space-evenly;
 }
 
+.chooseTheme__choice__btnWrapper {
+  position: relative;
+  width: fit-content;
+}
+
+.chooseTheme__choice__btnWrapper__btnBackground {
+  border-radius: 10px;
+  position: absolute;
+  width: calc(100% + 4px);
+  transform: translateX(-2px);
+  height: 100%;
+  background: Button.$mainGradient;
+}
+
 .chooseTheme__choice__button {
+  position: relative;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  background: black;
   padding: 6px 10px;
   font-size: 1.2rem;
+  transition: all 1s linear;
+}
+
+.chooseTheme__choice__button.active {
+  color: black;
+  background: none;
 }
 
 .chooseTheme__preloaderWrapper {

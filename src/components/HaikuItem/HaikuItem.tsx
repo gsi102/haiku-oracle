@@ -26,12 +26,12 @@ const HaikuItem: React.FC = () => {
     <div className={styles.haikuItem + " " + appear}>
       <div className={styles.haikuItem__wrapper}>
         <div className={styles.haikuItem__text}>
-          {haikuStrings.map((el) => {
+          {haikuStrings.map((el, index) => {
             return (
-              <>
+              <div key={index}>
                 <span>{el}</span>
                 <br />
-              </>
+              </div>
             );
           })}
         </div>

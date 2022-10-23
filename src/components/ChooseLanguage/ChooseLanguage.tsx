@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { LanguageType } from "types/types";
 import { useAppDispatch } from "../../hooks/useAppDispatch";
-import { setLanguage } from "../../store/reducers/commonSlice";
+import { useAppSelector } from "../../hooks/useAppSelector";
+import { setHaiku, setLanguage } from "../../store/reducers/commonSlice";
 import { LANGUAGE, RU_CODE, EN_CODE } from "../../constants/CONST";
 import Button from "../UI/Button/Button";
 
@@ -18,7 +19,11 @@ const RU_NAME = LANGUAGE.RU.LANGUAGE_NAME;
 const EN_NAME = LANGUAGE.EN.LANGUAGE_NAME;
 
 const ChooseLanguage: React.FC = () => {
+  const haikuText = useAppSelector((state) => state.common.haikuText);
+
   const [appear, setAppear] = useState("");
+  const [activeEN, setActiveEN] = useState("");
+  const [activeRU, setActiveRU] = useState("");
   const dispatch = useAppDispatch();
 
   useEffect(() => {
@@ -30,6 +35,23 @@ const ChooseLanguage: React.FC = () => {
 
   const onChoice = (langType: LanguageType) => {
     dispatch(setLanguage({ data: langType }));
+    if (haikuText) {
+      dispatch(
+        setHaiku({
+          data: { text: "", author: "", years: "" },
+        })
+      );
+    }
+
+    if (langType === EN_CODE) {
+      setActiveRU("");
+      return setActiveEN(styles.active);
+    }
+
+    if (langType === RU_CODE) {
+      setActiveRU(styles.active);
+      return setActiveEN("");
+    }
   };
 
   // prettier-ignore
@@ -37,8 +59,13 @@ const ChooseLanguage: React.FC = () => {
     <div className={styles.chooseLanguage + " " + appear}>
       <span className={styles.chooseLanguage__header}>{"\uD83D\uDCAD"}</span>
       <div className={styles.chooseLanguage__choice}>
-        <Button className={CHOICE_BUTTON_STYLE} onClick={() => {onChoice(EN_CODE)}}>{EN_NAME}</Button>
-        <Button className={CHOICE_BUTTON_STYLE} onClick={() => {onChoice(RU_CODE)}}>{RU_NAME}</Button>
+        <div className={styles.chooseLanguage__choice__btnWrapper}>
+          <div className={styles.chooseLanguage__choice__btnWrapper__btnBackground}/>
+          <Button className={CHOICE_BUTTON_STYLE + " " + activeEN} onClick={() => onChoice(EN_CODE)}>{EN_NAME}</Button>
+        </div >
+        <div className={styles.chooseLanguage__choice__btnWrapper}>
+          <div className={styles.chooseLanguage__choice__btnWrapper__btnBackground}/>
+          <Button className={CHOICE_BUTTON_STYLE + " " + activeRU} onClick={(e: any) => onChoice(RU_CODE)}>{RU_NAME}</Button></div>
       </div>
     </div>
   );

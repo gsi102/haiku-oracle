@@ -21,6 +21,8 @@ export const commonSlice = createSlice({
       state.theme = action.payload.data;
     },
     setHaiku: (state, action) => {
+      console.log("here");
+
       state.haikuText = action.payload.data.text;
       state.haikuAuthor = action.payload.data.author;
       state.haikuYears = action.payload.data.years;

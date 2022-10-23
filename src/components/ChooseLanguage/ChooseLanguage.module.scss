@@ -1,3 +1,6 @@
+@use "../UI/Button/Button.module.scss" as Button;
+@use "../../styles/mainStyles.module.scss" as global;
+
 .chooseLanguage {
   position: relative;
   display: flex;
@@ -47,7 +50,34 @@
   justify-content: space-evenly;
 }
 
+.chooseLanguage__choice__btnWrapper {
+  position: relative;
+  width: fit-content;
+}
+
+.chooseLanguage__choice__btnWrapper__btnBackground {
+  position: absolute;
+  width: 100%;
+  height: calc(100% + 4px);
+  transform: translateY(-2px);
+  background: Button.$mainGradient;
+  border-radius: 10px;
+}
+
 .chooseLanguage__choice__button {
+  border-radius: 10px;
+  border: none;
+  position: relative;
+  color: white;
+  background: black;
+  display: block;
   padding: 6px 10px;
   font-size: 1.2rem;
+  transition: all 1s linear;
+  font-weight: 400;
+}
+
+.chooseLanguage__choice__button.active {
+  color: black;
+  background: none;
 }
