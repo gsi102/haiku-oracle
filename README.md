@@ -11,8 +11,7 @@ Front:
 - SASS
 - Typescript
 
-Back:
-https://github.com/gsi102/haiku-oracle-back-public-.git
+Back (please contact me if you are interested in link):
 - NodeJS (express)
 - MongoDB
 - Typescript
