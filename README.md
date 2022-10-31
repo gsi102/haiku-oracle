@@ -13,9 +13,9 @@ Languages:
 - ***English***
 
 Themes:
-- ***eternity***
-- ***love***
-- ***freedom***
+- ***Eternity***
+- ***Love***
+- ***Freedom***
 
 # Stack
 
