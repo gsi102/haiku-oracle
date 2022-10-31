@@ -1,8 +1,21 @@
 # Haiku Oracle Telegram Bot
 
-Frontend. The Web-app is adaptated for the internal TG browser.
+Link: https://t.me/haikuoraclebot
 
-The telegram bot @haikuoraclebot (link: https://t.me/haikuoraclebot ) sends you a Japanese haiku in two languages and on the chosen topic. 
+> The Web-app is adaptated for the internal TG browser.
+
+## App functionality:
+
+The telegram bot @haikuoraclebot ( https://t.me/haikuoraclebot ) can send you a Japanese haiku from DB in two languages and on the chosen topic. 
+
+Languages:
+- ***Russian***
+- ***English***
+
+Themes:
+- ***eternity***
+- ***love***
+- ***freedom***
 
 # Stack
 
